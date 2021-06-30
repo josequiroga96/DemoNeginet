@@ -1,0 +1,15 @@
+<div class="people-details-header">
+  <h1 mat-dialog-title>Persona</h1>
+
+  <button mat-icon-button aria-label="close details button" (click)="closeDetails()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+
+<div mat-dialog-content class="people-details-content">
+  <p class="item">Nombre: {{people.name}}</p>
+</div>
+
+<div mat-dialog-actions class="people-details-actions">
+  <button mat-raised-button color="warn" (click)="deleteUser()">Eliminar</button>
+</div>
