@@ -12,5 +12,5 @@ public interface PeopleRepository extends CrudRepository<People, Long> {
     List<People> findAllByName(String name);
 
     @Query("select p.id from People p where p.name = ?1")
-    List<Long> getAllBy(String name);
+    List<Long> getAllByName(String name);
 }

@@ -46,6 +46,6 @@ public class PeopleService {
     }
 
     public List<Long> getIds(String name) {
-        return PEOPLE_REPOSITORY.getAllBy(name);
+        return PEOPLE_REPOSITORY.getAllByName(name);
     }
 }
