@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  url: 'http://back:8080'
+  url: 'http://ec2-3-238-255-220.compute-1.amazonaws.com:8080'
 };
