@@ -14,6 +14,38 @@ services:
       MYSQL_USER: root
       MYSQL_PASSWORD: password
       MYSQL_ROOT_PASSWORD: password
+    networks:
+      - back
+
+  back:
+    image: neginet/back
+    container_name: "back"
+    depends_on:
+      - db
+    build:
+      context: ./back/
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    networks:
+      - back
+
+  front:
+    image: neginet/front
+    container_name: "front"
+    depends_on:
+      - back
+    build:
+      context: ./front/
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "80:80"
+    networks:
+      - back
+
+networks:
+  back:
 
 volumes:
   db_data: {}
