@@ -6,7 +6,7 @@ Se va a requerir tener 3 terminales.
 
 
 1ra terminal - Correr el siguiente comando desde la carpeta root del proyecto:
- * `docker-compose up` --> Para levantar y correr la base de datos
+ * `docker-compose up db` --> Para levantar y correr la base de datos
  
 2da terminal - Correr los siguientes comandos desde la carpeta root del proyecto:
  * `cd back` --> Para dirigirnos al proyecto de spring boot 
